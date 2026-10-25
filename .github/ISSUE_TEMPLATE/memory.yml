@@ -1,0 +1,22 @@
+name: ta又忘了 / 记错了
+description: 用一个脱敏的小故事，帮「不止七秒」记得更好。
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: 发生了什么？
+      description: 请替换真实姓名、QQ 号和私密经历，不要附 API key 或完整记忆库。
+      placeholder: 我说过……，重启后我问……，ta却回答……
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 发生在哪种模式？
+      options: [DSH 插件, 命令行演示, 嵌入自己的项目]
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你希望ta记住什么？
