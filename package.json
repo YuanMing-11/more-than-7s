@@ -1,0 +1,52 @@
+{
+  "name": "more-than-7s",
+  "version": "0.2.0",
+  "description": "不止七秒：传说鱼只有七秒记忆，第八秒，ta还记得你。让 DeepSeek 记得你认真说过的小事，也慢慢懂你。DeepSeek Harness 记忆插件。",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "main": "./src/plugin.mjs",
+  "exports": {
+    ".": "./src/plugin.mjs",
+    "./memory": "./src/memory.mjs",
+    "./storage": "./src/storage.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "memory",
+    "ai-companion"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node scripts/demo.mjs",
+    "eval": "node scripts/eval-recall.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuanMing-11/more-than-7s.git"
+  },
+  "homepage": "https://github.com/YuanMing-11/more-than-7s#readme",
+  "bugs": {
+    "url": "https://github.com/YuanMing-11/more-than-7s/issues"
+  }
+}

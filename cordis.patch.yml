@@ -1,0 +1,22 @@
+# 不止七秒 —— 传说鱼只有七秒记忆。第八秒，它还记得你。DSH 记忆插件。
+#
+# 这个文件必须是顶层 YAML 数组。`name` 必须等于 package.json 的 name。
+# 在 profile 里覆写这一行时，config 会整体替换、不会合并：想保留的键请写全。
+
+- insert:
+    - id: more-than-7s
+      name: more-than-7s
+      config:
+        # 总开关。
+        enabled: true
+        # 记忆档案目录。留空 = $DSH_HOME/more-than-7s（默认 ~/.dsh/more-than-7s）；
+        # 相对路径按 $DSH_HOME 解析，也可以写绝对路径。
+        dataDir: ''
+        # 每轮注入的记忆最多占多少字符（不是 token）。整条放入，放不下就跳过，不截断原话。
+        maxChars: 2000
+        # 最近几天的故事和说好的事，即使这句没提到也每轮带上（最多 5 条），
+        # 好让它记得问一句“后来怎么样了”。0 = 关闭。
+        recentDays: 14
+        # 写入、改口、忘记都要求 source 逐字出自用户在本会话里亲口说的话。
+        # 关掉后模型可以凭自己的理解写记忆，失去“每条都有原话”的保证。
+        requireQuote: true

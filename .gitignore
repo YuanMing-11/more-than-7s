@@ -1,0 +1,24 @@
+node_modules/
+.env
+.env.*
+data/
+*.log
+*.tgz
+.DS_Store
+coverage/
+test-results/
+
+# Kept on this machine only, not published: internal handoff notes, research and
+# launch planning, campaign art sources, and the offline web demo with its tooling.
+HANDOFF.md
+CLAUDE.md
+发布交接.md
+docs/research.md
+docs/launch-kit.md
+docs/campaign-v2-handoff.md
+assets/banner.svg
+assets/campaign-v1/
+assets/campaign-v2/
+demo/
+scripts/build-demo.mjs
+scripts/preview.mjs
